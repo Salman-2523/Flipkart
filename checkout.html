@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/673d24dcfe.js" crossorigin="anonymous"></script>
+    <style>
+      *{
+            padding: 0;
+            margin: 0;
+        }
+       body{
+        cursor: pointer;
+      }
+       #box1 {
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: 180px;
+        border-bottom: 2px solid rgb(212, 201, 201);
+      }
+      #box11 {
+        width: 25%;
+        padding: 10px;
+        margin: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #box11 > img {
+        width: 75%;
+        margin-left: 17%;
+        margin-bottom: 5px;
+        border: 1px solid rgb(221, 208, 208);
+      }
+      #box12 {
+        width: 74%;
+        padding: 10px;
+        margin: 1%;
+      }
+      #cartline1 {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+      }
+      #cartline1 > div {
+        margin-right: 20px;
+      }
+      #cartline {
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-between;
+      }
+      #cartline > div {
+        color: gray;
+        font-size: 15px;
+      }
+      #productName {
+        font-size: 20px;
+        font-weight: 510;
+      }
+      #price {
+        font-size: 22px;
+        font-weight: 520;
+      }
+      #price2 {
+        font-size: 18px;
+        color: gray;
+        text-decoration: line-through;
+      }
+      #price3 {
+        color: green;
+        font-size: 18px;
+        font-weight: 520;
+      }
+      #flipass {
+        width: 110px;
+        margin-top: 10px;
+      }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+      #cart {
+        width: 96%;
+        padding-left: 2%;
+        padding-right: 2%;
+        display: flex;
+      }
+      #leftcart {
+        flex: 7;
+        height: 96%;
+        margin: 1%;
+        padding: 20px;
+        padding-top: 0%;
+      }
+      #leftcart>div{
+        box-shadow: rgba(26, 28, 29, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+      #rightcart {
+        flex: 3;
+        height: 96%;
+        margin: 1%;
+        padding: 10px;
+        box-shadow: rgba(37, 38, 39, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      }
+      #rightcart1 {
+        width: 100%;
+        height: 50px;
+        border-bottom: 2px solid rgb(212, 205, 205);
+        color: gray;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+      }
+      #rightcart2,
+      #rightcart3,
+      #rightcart4,
+      #rightcart5 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+      #rightcart4 {
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgb(219, 208, 208);
+      }
+      #rightcart5 {
+        font-size: 22px;
+        font-weight: 530;
+        border-bottom: 2px solid rgb(214, 206, 206);
+        padding-bottom: 20px;
+      }
+      #rightcart6 {
+        font-size: 20px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        color: green;
+      }
+      #leftcart1{
+        width: 100%;
+      }
+      #leftcart>div{
+        margin-top: 20px;
+      }
+      
+      #leftcart12{
+        width: 200px;
+        height: 25px;
+        padding: 5px;
+        text-align: center;
+        border: none;
+        border: 2px solid rgb(206, 191, 191);
+        margin: 25px;
+      }
+      #leftcart13{
+        background-color: #fb641b;
+        width: 160px;
+        height: 40px;
+        border: 0;
+        border-radius: 5px;
+        color: white;
+      }
+      #leftcart14{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #leftcart15{
+        width: 96%;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        color: gray;
+        font-size: x-large;
+        padding: 2%;
+      }
+      #leftcart16{
+        color: black;
+        font-size: x-large;
+      }
+      #leftcart2{
+        width: 100%;
+      }
+      #leftcart22{
+        display: grid;
+        grid-template-areas: "a b"
+                             "c d"
+                             "e e"
+                             "f g"
+                             "h i";
+        /* grid-gap: 15px; */
+        padding: 40px;
+        row-gap: 25px;
+        column-gap: 70px;
+      }
+      #leftcart22>input{
+        height: 30px;
+        border: 1px solid rgb(199, 189, 189);
+        padding-left: 10px;
+      }
+      #leftcart22>textarea{
+        height: 50px;
+        border: 1px solid rgb(199, 189, 189);
+        
+      }
+      .i1{
+        grid-area: a;
+       
+      }
+      .i2{
+        grid-area: b;
+      }
+      .i3{
+        grid-area: c;
+      }
+      .i4{
+        grid-area: d;
+      }
+      .i5{
+        grid-area: e;
+      }
+      .i6{
+        grid-area: f;
+      }
+      .i7{
+        grid-area: g;
+      }
+      .i8{
+        grid-area: h;
+      }
+      .i9{
+        grid-area: i;
+      }
+      #leftcart42{
+        width: 60%;
+        display: grid;
+        grid-template-areas: "a a"
+                              "b c";
+        row-gap: 20px;
+        column-gap: 35px;
+        padding: 40px;
+        margin: auto;
+       
+      
+      }
+      #leftcart42>input{
+        height: 30px;
+        border: 1px solid gray;
+        padding: 5px;
+      }
+      .p1{
+        grid-area: a;
+      }
+      .p2{
+        grid-area: b;
+      }
+      .p3{
+        grid-area: c;
+      }
+      .top{
+        width: 96%;
+        height: 20px;
+        background-color: #047bd5;
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: x-large;
+        padding: 2%;
+      }
+      #changetop{
+        width: 96%;
+        height: 20px;
+        background-color: white;
+        /* border: 2px solid rgb(218, 206, 206); */
+        display: flex;
+        align-items: center;
+        color: gray;
+        font-size: x-large;
+        padding: 2%;
+
+      }
+      .bottom{
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .bottom>button{
+        background-color: #fb641b;
+        width: 160px;
+        height: 40px;
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        margin-right: 30px;
+      }
+      #leftcart22{
+        display: none;
+      }
+      #b1{
+        display: none;
+      }
+      #leftcart32{
+        display: none;
+      }
+      #b2{
+        display: none;
+      }
+      #leftcart42{
+        display: none;
+      }
+      #b3{
+        display: none;
+      }
+      #tick{
+        color:#047bd5 ;
+        margin-left: 20px;
+        font-size: 23px;
+      }
+      #i5::placeholder{
+        font-size: 14px;
+      }
+      /* -------------navbar----------------- */
+      
+  #navbar {
+    height: 56px;
+    width: 100%;
+    background-color: #2874f0;
+    display: flex;
+    /* position: fixed; */
+  }
+
+  #flipkart-logo {
+    height: 100%;
+    width: 137px;
+    margin-left: 148px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+  }
+  #flipkart-logo > img {
+    height: 20.11px;
+    width: 75px;
+    margin-top: 10px;
+    margin-left: 3.8rem;
+  }
+  #flipkart-logo > a {
+    text-align: end;
+    font-size: 11px;
+    font-style: italic;
+    text-decoration: none;
+  }
+  #flipkart-logo > a {
+    color: white;
+  }
+  #flipkart-logo > a > span {
+    color: #ffe500;
+  }
+     
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="flipkart-logo" onclick="toindex()">
+          <img
+            src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+            alt=""
+          />
+          <a href=""
+            >Explore <span>Plus</span>
+            <img
+              src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png"
+              alt=""
+              width="10px"
+            />
+          </a>
+        </div>
+  </nav>
+    <div id="cart">
+      <div id="leftcart">
+
+        <div id="leftcart1">
+          <div id="leftcart11" class="top">Mobile Number<i class="fa-solid fa-check" id="tick"></i></div>
+           <div id="leftcart14">
+            <input id="leftcart12" type="number"></input>
+            <button id="leftcart13" onclick="c1()">continue to Checkout</button></div>
+        </div>
+
+        <div id="leftcart2">
+          <div id="leftcart21" class="top">DELIVERY ADDRESS<i class="fa-solid fa-check" id="tick"></i></div>
+          <div id="leftcart22">
+            <input class="i1" type="text" placeholder="Name">
+            <input class="i2" type="Number" placeholder="10-digit mobile number">
+            <input class="i3" type="number" placeholder="Pincode">
+            <input class="i4" type="text" placeholder="Locality">
+            <textarea class="i5" placeholder="Address (Area and Street)"></textarea>
+            <input class="i6" type="text" placeholder="City/District/Town">
+            <input class="i7" type="text" placeholder="State">
+            <input class="i8" type="Text" placeholder="Landmark (Optional)">
+            <input class="i9" type="number" placeholder="Alternate Phone (Optional)">
+          </div>
+          <div class="bottom" id="b1">
+            <button onclick="c2()">continue to Checkout</button>
+          </div>
+          </div>
+
+          <div id="leftcart3">
+            <div id="leftcart31" class="top">ORDER SUMMERY<i class="fa-solid fa-check" id="tick"></i></div>
+            <div id="leftcart32"></div>
+            <div class="bottom" id="b2">
+              <button onclick="c3()">continue to Checkout</button>
+            </div>
+        </div>
+
+        <div id="leftcart4" >
+          <div id="leftcart41" class="top">PAYMENT OPTIONS<i class="fa-solid fa-check" id="tick"></i></div>
+          <div id="leftcart42">
+            <input class="p1" type="number" placeholder="Card Number">
+            <input class="p2" type="date" placeholder="Expiry Date" >
+            <input class="p3" type="number" placeholder="CVV">
+          </div>
+          <div class="bottom" id="b3">
+            <button onclick="c4()">Pay Now</button>
+          </div>
+
+        </div>
+
+      </div>
+      <div id="rightcart">
+        <div id="rightcart1">PRICE DETAILS</div>
+
+        <div id="rightcart2">
+          <div>Price</div>
+          <div id="a1"></div>
+        </div>
+        <div id="rightcart4">
+          <div>delivery Charges</div>
+          <div id="a3" style="color: rgb(14, 138, 14); font-size: 20px">
+            Free
+          </div>
+        </div>
+        <div id="rightcart5">
+          <div>Total Amount</div>
+          <div id="a4"></div>
+        </div>
+        <div id="rightcart6">
+          You will save ₹<span id="a6"></span> on this order
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var price=JSON.parse(localStorage.getItem("price"))
+  document.querySelector("#a1").textContent=price
+  document.querySelector("#a4").textContent=price
+function c1(){
+  document.querySelector("#leftcart14").style.display="none"
+  document.querySelector("#leftcart22").style.display="grid"
+  document.querySelector("#b1").style.display="flex"
+  document.querySelector("#leftcart11").id="changetop"
+
+}
+
+function c2(){
+  document.querySelector("#leftcart22").style.display="none"
+  document.querySelector("#b1").style.display="none"
+  document.querySelector("#leftcart32").style.display="grid"
+  document.querySelector("#b2").style.display="flex"
+  document.querySelector("#leftcart21").id="changetop"
+}
+
+function c3(){
+  document.querySelector("#leftcart32").style.display="none"
+  document.querySelector("#b2").style.display="none"
+  document.querySelector("#leftcart42").style.display="grid"
+  document.querySelector("#b3").style.display="flex"
+  document.querySelector("#leftcart31").id="changetop"
+}
+
+function c4(){
+  document.querySelector("#leftcart42").style.display="none"
+  document.querySelector("#b3").style.display="none"
+  document.querySelector("#leftcart41").id="changetop"
+  alert("order Placed")
+  window.location.href="index.html"
+}
+
+  displaydata()
+  function displaydata() {
+    var res = JSON.parse(localStorage.getItem("cart"));
+    res=res.slice(1)
+    console.log(res);
+    
+    res.map(function (data, hn) {
+      var div = document.createElement("div");
+      div.id = "box1";
+
+      var imgdiv = document.createElement("div");
+      imgdiv.id = "box11";
+
+      var image = document.createElement("img");
+      image.setAttribute("src", data.thumbnails[0]);
+
+      var textdiv = document.createElement("div");
+      textdiv.id = "box12";
+
+      var productName = document.createElement("div");
+      productName.id = "productName";
+      productName.textContent = data.name.substring(0,40);
+
+      var cartline = document.createElement("div");
+      cartline.id = "cartline";
+
+      var seller = document.createElement("div");
+      seller.textContent = "FlipKart";
+
+      var replacee = document.createElement("div");
+      replacee.textContent = "7 Days Replacement Policy";
+
+      var cartline1 = document.createElement("div");
+      cartline1.id = "cartline1";
+
+      let a = +data.current_price;
+      let b = +data.original_price;
+
+
+      let c = Math.floor(((b - a) / b) * 100);
+
+      a4 = a4 + a;
+
+      var price = document.createElement("div");
+      price.id = "price";
+      price.textContent = "₹" + data.current_price;
+
+      a1 = a1 + b;
+      var price2 = document.createElement("div");
+      price2.id = "price2";
+      price2.textContent = "₹" + data.original_price;
+
+      var price3 = document.createElement("div");
+      price3.id = "price3";
+      price3.textContent = c + " %" + "    off";
+
+      var assuer = document.createElement("img");
+      assuer.src = "https://www.adgully.com/img/800/68264_fl.png.jpg";
+      assuer.id = "flipass";
+
+
+      cartline.append(seller, replacee);
+      cartline1.append(price, price2, price3);
+      imgdiv.append(image);
+      textdiv.append(productName, cartline, cartline1, assuer);
+      div.append(imgdiv, textdiv);
+      document.querySelector("#leftcart32").append(div);
+    });
+  }
+  function toindex(){
+    window.location.href="index.html"
+  }
+
+</script>

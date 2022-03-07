@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            cursor: pointer;
+        }
+
+        #cart {
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            display: flex;
+            height: 510px;
+        }
+
+        #box1 {
+            flex: 4;
+            background-color: #047bd5;
+            color: white;
+            padding: 25px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        #box1>img {
+            position: absolute;
+            bottom: 90px;
+            margin: auto;
+            width: 200px;
+        }
+
+        #box2 {
+            flex: 6;
+            padding: 40px;
+            padding-top: 50px;
+            border: 2px solid rgb(185, 178, 178);
+        }
+
+        #mbl {
+            width: 100%;
+            margin: auto;
+            height: 30px;
+            border: 0;
+            border-bottom: 2px solid rgb(179, 178, 178);
+            margin-bottom: 30px;
+        }
+
+        .passinp {
+            width: 100%;
+            margin: auto;
+            height: 30px;
+            border: 0;
+            border-bottom: 2px solid rgb(179, 178, 178);
+            margin-bottom: 30px;
+        }
+
+        #afterinp {
+            width: 100%;
+            margin: auto;
+            height: 30px;
+            border: 0;
+            border-bottom: 2px solid #047bd5;
+            margin-bottom: 30px;
+        }
+
+        #afterpass {
+            width: 100%;
+            margin: auto;
+            height: 30px;
+            border: 0;
+            border-bottom: 2px solid #047bd5;
+            margin-bottom: 30px;
+        }
+
+        #afterinp:focus {
+            outline: none;
+        }
+
+        #afterpass:focus {
+            outline: none;
+        }
+
+        .ctnbut2 {
+            margin: auto;
+            margin-top: 20px;
+            width: 100%;
+            height: 45px;
+            border: 0;
+            background-color: #fb641b;
+            color: white;
+            text-align: center;
+        }
+
+        #cntbut1 {
+            margin: auto;
+            margin-top: 20px;
+            width: 100%;
+            height: 45px;
+            border: 2px solid rgb(194, 181, 181);
+            background-color: white;
+            color: #047bd5;
+            text-align: center;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        button {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* ----------------- */
+        #navbar {
+            height: 56px;
+            width: 100%;
+            background-color: #2874f0;
+            display: flex;
+            /* position: fixed; */
+        }
+
+        #flipkart-logo {
+            height: 100%;
+            width: 137px;
+            margin-left: 148px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #flipkart-logo>img {
+            height: 20.11px;
+            width: 75px;
+            margin-top: 10px;
+            margin-left: 3.8rem;
+        }
+
+        #flipkart-logo>a {
+            text-align: end;
+            font-size: 11px;
+            font-style: italic;
+            text-decoration: none;
+        }
+
+        #flipkart-logo>a {
+            color: white;
+        }
+
+        #flipkart-logo>a>span {
+            color: #ffe500;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="flipkart-logo">
+            <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                alt="" />
+            <a href="">Explore <span>Plus</span>
+                <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png" alt=""
+                    width="10px" />
+            </a>
+        </div>
+    </nav>
+    <div id="cart">
+        <div id="box1">
+            <div style="color: white;font-size: 30px;">
+                Login
+            </div>
+            <div style="color: white;font-size: 20px;margin-top: 25px;">Get access to your Orders, Wishlist and
+                Recommendations</div>
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOiGjhCtufibxKibDiWEc9T0A4MggTwq3Jcg&usqp=CAU">
+
+        </div>
+        <div id="box2">
+            <input id="mbl" class="mblinp" type="number" placeholder="Enter mobile number" onclick="mblclick()" />
+            <input id="none13" class="passinp" type="password" placeholder="Enter Password" onclick="pasclick()" />
+            <button id="none14" class="ctnbut2" onclick="signup(event)">Login</button>
+            <button id="cntbut1" onclick="newuser()">New User? Sign Up</button>
+        </div>
+</body>
+
+</html>
+<script>
+    function newuser() {
+        window.location.href = "Signup.html"
+    }
+    function mblclick() {
+        var inp1 = document.querySelector("#mbl").id = "afterinp"
+    }
+    function pasclick() {
+        document.querySelector(".passinp").id = "afterpass"
+    }
+    var regdUsers = JSON.parse(localStorage.getItem("userDataBase"));
+    function signup() {
+        var user = document.querySelector(".mblinp").value;
+        var pass = document.querySelector(".passinp").value;
+        console.log(user, pass)
+        var flag = false;
+        for (var i = 0; i < regdUsers.length; i++) {
+            console.log(regdUsers[i].userName, regdUsers[i].passwd);
+            if (regdUsers[i].mobile_no == user && regdUsers[i].password == pass) {
+                alert("Log In Success")
+                window.location.href = "index.html";
+                flag = true;
+            }
+        }
+        if (flag == false) {
+            alert("Invalid Credentiale")
+        }
+    } var d = document.querySelector("#flipkart-logo")
+    d.addEventListener("click", function () {
+        window.location.href = "index.html"
+    })
+</script>
