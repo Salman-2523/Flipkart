@@ -33,6 +33,26 @@
 ">https://flipkart01-clone.netlify.app/
 </a>
 
+<h2>Some Glimpse of the website</h2>
+
+<h4>Landing Page</h4>
+<img src="" alt="landing page">
+
+<hr>
+<h4>Sign up page</h4>
+<img src="" alt="courses page">
+
+<hr>
+<h4>Product page</h4>
+<img src="" alt="signup page">
+
+<hr>
+<h4>Cart Page</h4>
+<img src="" alt="teachers page">
+
+
+
+
 ## Team Members
 
 1. Hemant Suryawanshi
