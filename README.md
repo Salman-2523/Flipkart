@@ -32,23 +32,26 @@
 <a href="https://flipkart01-clone.netlify.app/
 ">https://flipkart01-clone.netlify.app/
 </a>
-
+<br/>
+<br/>
 <h2>Some Glimpse of the website</h2>
+<br/>
+<br/>
 
 <h4>Landing Page</h4>
-<img src="" alt="landing page">
+<img src="landing page.png" alt="landing page">
 
 <hr>
 <h4>Sign up page</h4>
-<img src="" alt="Sign up page">
+<img src="sign up page.png" alt="Sign up page">
 
 <hr>
 <h4>Product page</h4>
-<img src="" alt="Product page">
+<img src="product page.png" alt="Product page">
 
 <hr>
 <h4>Cart Page</h4>
-<img src="" alt="Cart page">
+<img src="cart page.png" alt="Cart page">
 
 
 
