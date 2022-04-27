@@ -17,7 +17,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-<h3>Flipkart is the most prominent e-Commerce website in India and is empowering tons of Indian businesses to venture into the competitive online shopping industry.   This multi-vendor website serves as the platform for vendors to display their products to the website's visitors. </h3>
+<h4>Flipkart is the most prominent e-Commerce website in India and is empowering tons of Indian businesses to venture into the competitive online shopping industry.   This multi-vendor website serves as the platform for vendors to display their products to the website's visitors. </h4>
 
 <h2>Stack and Libraries Used</h2>
 <ul>
@@ -26,13 +26,12 @@
   <li>CSS</li>
   <li>Nodejs, expressjs, mongodb (backend)</li>
 </ul>
-
-
-
-
 <br/>
 <br/>
-
+<h3>Deployed Link</h3>
+<a href="https://flipkart01-clone.netlify.app/
+">https://flipkart01-clone.netlify.app/
+</a>
 
 ## Team Members
 
