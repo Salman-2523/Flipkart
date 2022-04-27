@@ -40,15 +40,15 @@
 
 <hr>
 <h4>Sign up page</h4>
-<img src="" alt="courses page">
+<img src="" alt="Sign up page">
 
 <hr>
 <h4>Product page</h4>
-<img src="" alt="signup page">
+<img src="" alt="Product page">
 
 <hr>
 <h4>Cart Page</h4>
-<img src="" alt="teachers page">
+<img src="" alt="Cart page">
 
 
 
