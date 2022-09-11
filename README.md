@@ -29,8 +29,8 @@
 <br/>
 <br/>
 <h3>Deployed Link</h3>
-<a href="https://flipkart01-clone.netlify.app/
-">https://flipkart01-clone.netlify.app/
+<a href="https://flipkart-clone-frontend.vercel.app/
+">https://flipkart-clone-frontend.vercel.app/
 </a>
 <br/>
 <br/>
