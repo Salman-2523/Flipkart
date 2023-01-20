@@ -24,8 +24,7 @@
   <li>HTML</li>
   <li>Javascript</li>
   <li>CSS</li>
-  <li>Nodejs, expressjs, mongodb (backend)</li>
-</ul>
+  </ul>
 <br/>
 <br/>
 <h3>Deployed Link</h3>
